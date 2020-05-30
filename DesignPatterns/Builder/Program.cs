@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Pattern for constructing complex objects
+/// </summary>
 namespace Builder
 {
     class Program
@@ -22,7 +25,7 @@ namespace Builder
             foreach (var b in builders)
             {
                 var car = factory.Build(b);
-                Console.WriteLine($"The car requested by is {b.GetType().Name}:\n--------------------------------- " +
+                Console.WriteLine($"The car requested by is {b.GetType().Name}:\n--------------------------------------------- " +
                     $"\nHP: {car.HP}\nIpmressive Feature: {car.MostImpressiveFeature}" +
                     $"\nTopSpeed: {car.TopSpeedMPH} mph\n");
             }
